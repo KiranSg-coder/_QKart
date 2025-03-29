@@ -61,5 +61,15 @@
     "jest-localstorage-mock": "^2.4.18",
     "jest-location-mock": "^1.0.9",
     "webpack": "^4.44.2"
-  }
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "distDir": "build"
+      }
+    }
+  ]
 }
